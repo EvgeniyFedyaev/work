@@ -39,12 +39,12 @@
                 elseif ($rowEmails['checked'] == '0')
                 {
                     $check_email = check_email($rowEmails['email']);
+                    $sqlInsert = mysqli_query($connection, "INSERT INTO `emails` (`checked`, `valid`) VALUES ('1', '$check_email')");
                     if ($check_email == '1' && $rowUsers['confirmed'] == '1')
                     {
                         mail($rowUsers['email'], 'Subscription', "$rowUsers['username'], your subscription is expiring soon");
                         break;
                     }
-                    $sqlInsert = mysqli_query($connection, "INSERT INTO `emails` (`checked`, `valid`) VALUES ('1', '$check_email')");
                 }
             }
         }
