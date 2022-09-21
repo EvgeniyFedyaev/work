@@ -26,7 +26,7 @@
         while($rowUsers = $resultUsers->fetch_assoc())
         {
             $daysLeft = (strtotime($rowUsers['validts']) - strtotime($thisDate)) / 86400;
-            if ($daysLeft <= 3)
+            if ($daysLeft = 3)
             {
                 if ($rowEmails['checked'] == '1' && $rowEmails['valid'] == '1')
                 {
