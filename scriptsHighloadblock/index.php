@@ -3,6 +3,7 @@
 ?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");?>
 <?
 $APPLICATION->SetTitle("Настройка связи с мобильной версией");
+// Подразумевается библиотека PHPExcek в этой же папке
 require_once __DIR__ . '/PHPExcel-1.8/Classes/PHPExcel/IOFactory.php';
 
 use Bitrix\Main\Loader; 
